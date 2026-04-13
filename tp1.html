@@ -135,30 +135,22 @@ class="w-full h-64 object-cover rounded-xl mt-4 shadow-lg">
                         </div>
                     </section>
 
-                    <!-- Quiz -->
-                    <section class="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                        <div class="flex items-center gap-2 mb-4 text-blue-700">
-                            <i data-lucide="help-circle" class="w-6 h-6"></i>
-                            <h3 class="text-xl font-bold text-blue-900">Quiz de préparation</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <p class="text-slate-700 font-medium">
-                                Quel équipement est indispensable pour réaliser le "suivi temporel" de cette réaction ?
-                            </p>
-                            <div class="space-y-2" id="quizOptions">
-                                <button onclick="checkAnswer(0)" class="quiz-btn w-full text-left p-4 rounded-lg border border-blue-200 bg-white hover:border-blue-400 hover:bg-blue-100 text-slate-700 transition-all flex items-center justify-between">
-                                    <span>Un thermomètre</span>
-                                </button>
-                                <button onclick="checkAnswer(1)" class="quiz-btn w-full text-left p-4 rounded-lg border border-blue-200 bg-white hover:border-blue-400 hover:bg-blue-100 text-slate-700 transition-all flex items-center justify-between">
-                                    <span>Un chronomètre</span>
-                                </button>
-                                <button onclick="checkAnswer(2)" class="quiz-btn w-full text-left p-4 rounded-lg border border-blue-200 bg-white hover:border-blue-400 hover:bg-blue-100 text-slate-700 transition-all flex items-center justify-between">
-                                    <span>Un pH-mètre</span>
-                                </button>
-                            </div>
-                            <div id="quizFeedback" class="hidden p-4 rounded-lg mt-4"></div>
-                        </div>
-                    </section>
+                    <!-- ================= QUIZ COMPLET ================= -->
+<section class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+    <div class="flex items-center gap-2 mb-4 text-blue-700">
+        <i data-lucide="help-circle" class="w-6 h-6"></i>
+        <h3 class="text-xl font-bold text-blue-900">Quiz TP1 (10 questions)</h3>
+    </div>
+
+    <div id="quizContainer" class="space-y-6"></div>
+
+    <div class="mt-6">
+        <button onclick="showScore()" class="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700">
+            Voir le score
+        </button>
+        <p id="scoreResult" class="mt-4 font-bold text-lg"></p>
+    </div>
+</section>
                 </div>
             </div>
         </div>
