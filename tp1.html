@@ -136,6 +136,68 @@ class="w-full h-64 object-cover rounded-xl mt-4 shadow-lg">
                     </section>
 
                     <!-- ================= QUIZ COMPLET ================= -->
+                    <!-- ================= QUIZ ================= -->
+<div class="bg-white rounded-2xl shadow-md p-6 mt-8">
+  <h2 class="text-2xl font-bold text-blue-800 mb-4">🧪 Quiz TP1</h2>
+
+  <!-- Question 1 -->
+  <div class="mb-4">
+    <p class="font-semibold">1. Quelle est la réaction étudiée ?</p>
+    <button onclick="check(this, true)" class="btn">S₂O₈²⁻ + 2 I⁻ → 2 SO₄²⁻ + I₂</button><br>
+    <button onclick="check(this, false)" class="btn">I₂ → I⁻</button>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="mb-4">
+    <p class="font-semibold">2. Quelle espèce est colorée ?</p>
+    <button onclick="check(this, true)" class="btn">I₂</button><br>
+    <button onclick="check(this, false)" class="btn">I⁻</button>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="mb-4">
+    <p class="font-semibold">3. Loi de Beer-Lambert ?</p>
+    <button onclick="check(this, true)" class="btn">A = εℓC</button><br>
+    <button onclick="check(this, false)" class="btn">A = C/ℓ</button>
+  </div>
+
+  <p id="result" class="mt-4 font-bold"></p>
+</div>
+
+<!-- STYLE -->
+<style>
+.btn {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.correct {
+  background-color: #22c55e;
+  color: white;
+}
+.wrong {
+  background-color: #ef4444;
+  color: white;
+}
+</style>
+
+<!-- SCRIPT -->
+<script>
+let score = 0;
+
+function check(button, isCorrect) {
+  if (isCorrect) {
+    button.classList.add("correct");
+    score++;
+  } else {
+    button.classList.add("wrong");
+  }
+
+  document.getElementById("result").innerText = "Score : " + score;
+}
+</script>
 <section class="bg-blue-50 p-6 rounded-xl border border-blue-100">
     <div class="flex items-center gap-2 mb-4 text-blue-700">
         <i data-lucide="help-circle" class="w-6 h-6"></i>
